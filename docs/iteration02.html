@@ -19,7 +19,11 @@
             //gotDATA for now just announces itself 
             function gotData(data) {
                 alert("FUNCTION GOT DATA ACTIVATED")
-                document.getElementById("test_output").innerHTML = data.response.docs[0].headline.main
+                 var text= ' '
+                for (i=0; i < data.response.docs. length; i++){
+                    text= text + '<br />' + data.response.docs[i]. headline.main
+                }
+                document.getElementById("test_output").innerHTML = text
                }
            </script>
     </head>
@@ -31,3 +35,10 @@
 
       </body>
 </html>
+
+
+
+
+
+
+
